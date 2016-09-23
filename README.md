@@ -18,3 +18,12 @@ cd..
 chmod +x shopping-cart-test.sh
 ./shopping-cart-test.sh
 ```
+
+###IDEs
+O projeto também pode ser baixado no Eclipse ou Netbeans.
+Para testar basta executar a classe ShoppingCartApiApplication.java
+
+###Requisitos
+* Java 1.8
+* Git
+* Maven
