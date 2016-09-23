@@ -8,6 +8,11 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
+
+/**
+ * Generic exception handler.
+ * @author Daniel Kist
+ */
 @ControllerAdvice
 public class ExceptionHandler extends ResponseEntityExceptionHandler {
 	

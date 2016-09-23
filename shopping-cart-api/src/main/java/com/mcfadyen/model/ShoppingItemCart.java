@@ -1,5 +1,9 @@
 package com.mcfadyen.model;
 
+/**
+ * Bean for add to cart endpoint
+ * @author Daniel Kist
+ */
 public class ShoppingItemCart {
 
 	private String product_id;

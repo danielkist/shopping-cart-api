@@ -15,6 +15,10 @@ import com.mcfadyen.model.CommerceItem;
 import com.mcfadyen.model.ShoppingCart;
 import com.mcfadyen.model.ShoppingItemCart;
 
+/**
+ * Controller for Shopping Cart endpoints
+ * @author Daniel Kist
+ */
 @RestController
 public class ShoppingCartController {
 	

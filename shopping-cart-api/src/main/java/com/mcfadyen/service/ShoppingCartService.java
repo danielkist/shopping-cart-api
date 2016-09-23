@@ -5,6 +5,9 @@ import org.springframework.stereotype.Service;
 import com.mcfadyen.db.ShoppingCartSingleton;
 import com.mcfadyen.model.ShoppingCart;
 
+/**
+ * @author Daniel Kist
+ */
 @Service
 public class ShoppingCartService {
 	

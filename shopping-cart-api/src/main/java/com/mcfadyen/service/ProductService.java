@@ -7,6 +7,9 @@ import org.springframework.stereotype.Service;
 import com.mcfadyen.db.ProductSingleton;
 import com.mcfadyen.model.Product;
 
+/**
+ * @author Daniel Kist
+ */
 @Service
 public class ProductService {
 	

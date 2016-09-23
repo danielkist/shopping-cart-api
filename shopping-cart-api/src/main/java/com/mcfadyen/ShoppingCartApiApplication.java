@@ -6,6 +6,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import com.mcfadyen.db.ShoppingCartSingleton;
 import com.mcfadyen.model.ShoppingCart;
 
+/**
+ * Main class
+ * @author Daniel Kist
+ */
 @SpringBootApplication
 public class ShoppingCartApiApplication {
 

@@ -13,7 +13,6 @@ import com.mcfadyen.service.ProductService;
 import com.mcfadyen.service.ShoppingCartService;
 
 /**
- * Manager class for ShoppingCart
  * @author Daniel Kist
  */
 @Component

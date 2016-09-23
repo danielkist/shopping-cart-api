@@ -11,6 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 import com.mcfadyen.manager.ProductManager;
 import com.mcfadyen.model.Product;
 
+/**
+ * Controller for Product endpoints
+ * @author Daniel Kist
+ */
 @RestController
 public class ProductController {
 	

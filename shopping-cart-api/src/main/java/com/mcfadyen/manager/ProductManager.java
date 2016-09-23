@@ -9,7 +9,6 @@ import com.mcfadyen.model.Product;
 import com.mcfadyen.service.ProductService;
 
 /**
- * ProductManager
  * @author Daniel Kist
  */
 @Component
