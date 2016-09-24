@@ -19,7 +19,15 @@ public class ShoppingCartService {
 	}
 	
 	public ShoppingCart select(String sessionID) {
-		return db.get(sessionID);
+		ShoppingCart cart = db.get(sessionID);
+		
+		//If cart doesn't exists, create one
+		if(cart == null) {
+			System.out.println("Creating Empty Cart");
+			cart = new ShoppingCart();
+			insert(sessionID, cart);
+		}
+		return cart;
 	}
 
 }

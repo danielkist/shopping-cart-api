@@ -5,15 +5,14 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.context.request.RequestContextHolder;
 
 import com.mcfadyen.manager.ShoppingCartManager;
 import com.mcfadyen.model.CommerceItem;
 import com.mcfadyen.model.ShoppingCart;
-import com.mcfadyen.model.ShoppingItemCart;
 
 /**
  * Controller for Shopping Cart endpoints
@@ -36,13 +35,15 @@ public class ShoppingCartController {
     }
 	
 	@RequestMapping(value = "/shoppingcart/items", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    public CommerceItem post(@RequestBody ShoppingItemCart itemCart) throws Exception {
-		return manager.addItem(getAuthorization(), itemCart.getProduct_id(), itemCart.getQuantity());
+    public CommerceItem postJson(String product_id, Integer quantity) throws Exception {
+		return manager.addItem(getAuthorization(), product_id, quantity);
     }
 	
-	//Retrieve the Authorization Token from Headers
+	//Retrive SessionID or Authorization Header
 	private String getAuthorization() {
-		 return request.getHeader("Authorization");
+		String auth = request.getHeader("Authorization");
+		if(auth == null) auth = RequestContextHolder.currentRequestAttributes().getSessionId();
+		return auth;
 	}
 
 }

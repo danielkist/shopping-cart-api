@@ -29,7 +29,7 @@ public class ShoppingCart {
 	 * @return
 	 */
 	public BigDecimal getAmount() {
-		return items.stream().map(i -> i.getAmount().multiply(BigDecimal.valueOf(i.getQuantity()))).reduce(BigDecimal.ZERO, BigDecimal::add);	
+		return items.stream().map(i -> i.getAmount()).reduce(BigDecimal.ZERO, BigDecimal::add);	
 	}
 
 }
