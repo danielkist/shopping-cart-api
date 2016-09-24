@@ -2,7 +2,7 @@
 ##Download, build, run and test instructions:
 
 ###Download
-```git clone git clone https://github.com/danielkist/shopping-cart-api.git```
+```git clone https://github.com/danielkist/shopping-cart-api.git```
 
 ###Build
 ```
